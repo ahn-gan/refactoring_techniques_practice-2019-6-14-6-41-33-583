@@ -13,13 +13,11 @@ public class OwingPrinter {
     }
 
     private void print(String name, double outstanding) {
-        // print banner
-        System.out.println ("*****************************");
-        System.out.println ("****** Customer totals ******");
-        System.out.println ("*****************************");
-        // print details
-        System.out.println("name: " + name);
-        System.out.println("amount: " + outstanding);
+        System.out.println(String.format("*****************************\n" +
+                "****** Customer totals ******\n" +
+                "*****************************\n" +
+                "name: %s\n" +
+                "amount: %1.f\n", name, outstanding));
     }
 
     private double getOutstanding(List<Order> orders) {
